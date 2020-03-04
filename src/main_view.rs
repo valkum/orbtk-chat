@@ -27,7 +27,7 @@ impl Template for MainView {
                         .column("*")
                         .build(),
                 )
-                .selector("app")
+                .id("app")
                 .child(
                     LeftPane::create()
                         .attach(Grid::column(0))

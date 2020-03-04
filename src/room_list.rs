@@ -27,14 +27,14 @@ impl Template for RoomList {
                 .padding((0.0, 10.0, 0.0, 0.0))
                 .attach(Grid::column(0))
                 .attach(Grid::row(0))
-                .selector("roomList-container")
+                .id("roomList-container")
                 .child(
                     ListView::create()
                         .items_builder(move |bc, index| {
                             Container::create()
                                 .padding(20.)
                                 .child(
-                                    TextBlock::create().text(format!("Channel {}", index).build(ctx)
+                                    TextBlock::create().text(format!("Channel {}", index)).build(bc)
                                 )
                                 .build(bc)
                             
