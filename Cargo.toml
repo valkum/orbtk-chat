@@ -1,0 +1,12 @@
+[package]
+name = "orbtk-chat"
+version = "0.0.1-dev"
+authors = ["Valkum <rudi.floren@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+orbtk = { git = "https://github.com/redox-os/orbtk", branch = "develop" }
+serde = "1.0.104"
+
+[features] 
+debug = ["orbtk/debug"]
