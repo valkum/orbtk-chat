@@ -19,7 +19,7 @@ Licensed under either of
 
 at your option.
 
-[build-badge]: https://github.com/valkum/orbtk-chat/workflows/build/badge.svg
+[build-badge]: https://github.com/valkum/orbtk-chat/workflows/Rust/badge.svg?branch=master
 [build]: https://github.com/valkum/orbtk-chat/actions
 [license-badge]: https://img.shields.io/github/license/valkum/orbtk-chat
 [license]: #license
