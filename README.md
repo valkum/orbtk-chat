@@ -23,5 +23,5 @@ at your option.
 [build]: https://github.com/valkum/orbtk-chat/actions
 [license-badge]: https://img.shields.io/github/license/valkum/orbtk-chat
 [license]: #license
-[rust-version-badge]: https://img.shields.io/badge/rust-latest%20stable-blue.svg?style=flat-square
-[rust-version]: #rust-version-policy
+[rust-version-badge]: https://img.shields.io/badge/rust-latest%20stable-blue.svg
+[rust-version]: #
