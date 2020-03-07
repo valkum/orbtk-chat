@@ -20,7 +20,25 @@ impl Template for RightPane {
     fn template(self, id: Entity, ctx: &mut BuildContext) -> Self {
         self.name("RightPane")
         .child(
-            
+            Stack::create()
+                .orientation("vertical")
+                .child(
+                    Container::create()
+                        .height(200.0)
+                        .width(200.0)
+                        .child(
+                            TextBlock::create()
+                                .text("ProfilePicture")
+                                .build(ctx)
+                        )
+                        .build(ctx)
+                )
+                .child(
+                    TextBlock::create()
+                        .text("Profile Info")
+                        .build(ctx)
+                )
+                .build(ctx)
         )
     }
 }

@@ -23,19 +23,31 @@ impl Template for MainView {
             Grid::create()
                 .columns(
                     Columns::create()
+                        .column(70.0)
                         .column("auto")
                         .column("*")
+                        .column("auto")
                         .build(),
                 )
                 .id("app")
                 .child(
-                    LeftPane::create()
+                    LeftMostPane::create()
                         .attach(Grid::column(0))
                         .build(ctx)
                 )
                 .child(
-                    RoomView::create()
+                    LeftPane::create()
                         .attach(Grid::column(1))
+                        .build(ctx)
+                )
+                .child(
+                    RoomView::create()
+                        .attach(Grid::column(2))
+                        .build(ctx)
+                )
+                .child(
+                    RightPane::create()
+                        .attach(Grid::column(3))
                         .build(ctx)
                 )
                 .build(ctx)

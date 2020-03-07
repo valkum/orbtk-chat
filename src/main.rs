@@ -1,7 +1,9 @@
 use orbtk::prelude::*;
 use serde::{Serialize, Deserialize};
 
+mod left_most_pane;
 mod left_pane;
+mod right_pane;
 mod main_view;
 mod message_panel;
 mod message_composer;
@@ -9,7 +11,10 @@ mod room_view;
 mod room_header;
 mod room_list;
 
+
+use left_most_pane::*;
 use left_pane::*;
+use right_pane::*;
 use main_view::*;
 use message_panel::*;
 use message_composer::*;
@@ -36,6 +41,7 @@ fn main() {
                 .title("OrbTK Chat Wireframe")
                 .size(900.0, 600.0)
                 .resizeable(true)
+                .borderless(true)
                 .theme(get_theme())
                 .child(
                     MainView::create().build(ctx)
