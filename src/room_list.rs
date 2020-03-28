@@ -24,7 +24,6 @@ impl Template for RoomList {
         self.name("RoomList")
         .child(
             Container::create()
-                .padding((0.0, 10.0, 0.0, 0.0))
                 .attach(Grid::column(0))
                 .attach(Grid::row(0))
                 .id("roomList-container")

@@ -26,15 +26,40 @@ impl Template for LeftPane {
     ///   # Room 2
     fn template(self, id: Entity, ctx: &mut BuildContext) -> Self {
         self.name("LeftPane")
-            .width(100.0)
+            // .width(100.0)
             .child(
                 Container::create()
-                    .padding((0.0, 10.0, 0.0, 0.0))
-                    .attach(Grid::column(0))
-                    .attach(Grid::row(0))
+                    .padding((0.0, 28.0, 0.0, 0.0))
+                    .background("#25272A")
                     .id("leftPanel-container")
                     .child(
-                        RoomList::create()
+                        Stack::create()
+                            .orientation("vertical")
+                            .child(
+                                TextBlock::create()
+                                    .font_size(20.0)
+                                    .text("My Username")
+                                    .build(ctx)
+                            )
+                            .child(
+                                TextBlock::create()
+                                    .text("Channels")
+                                    .build(ctx)
+                            )
+                            .child(
+                                RoomList::create()
+                                    .build(ctx)
+                            )
+                            .child(
+                                TextBlock::create()
+                                    .text("Direct Messages")
+                                    .build(ctx)
+                            )
+                            .child(
+                                TextBlock::create()
+                                    .text("User Username")
+                                    .build(ctx)
+                            )
                             .build(ctx)
                     )
                     .build(ctx)

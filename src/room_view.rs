@@ -23,28 +23,34 @@ impl Template for RoomView {
     fn template(self, id: Entity, ctx: &mut BuildContext) -> Self {
         self.name("RoomView")
         .child(
-            Grid::create()
-                .horizontal_alignment("start")
-                .rows(
-                    Rows::create()
-                        .row("auto")
-                        .row("*")
-                        .row("auto")
-                        .build()
-                )
+            Container::create()
+                .padding((28.0, 28.0, 28.0, 28.0,))
+                .background("#ffffff")
                 .child(
-                    RoomHeader::create()
-                        .attach(Grid::row(0))
-                        .build(ctx)
-                )
-                .child(
-                    MessagePanel::create()
-                        .attach(Grid::row(1))
-                        .build(ctx)
-                )
-                .child(
-                    MessageComposer::create()
-                        .attach(Grid::row(2))
+                    Grid::create()
+                        .horizontal_alignment("start")
+                        .rows(
+                            Rows::create()
+                                .row("auto")
+                                .row("*")
+                                .row("auto")
+                                .build()
+                        )
+                        .child(
+                            RoomHeader::create()
+                                .attach(Grid::row(0))
+                                .build(ctx)
+                        )
+                        .child(
+                            MessagePanel::create()
+                                .attach(Grid::row(1))
+                                .build(ctx)
+                        )
+                        .child(
+                            MessageComposer::create()
+                                .attach(Grid::row(2))
+                                .build(ctx)
+                        )
                         .build(ctx)
                 )
                 .build(ctx)
