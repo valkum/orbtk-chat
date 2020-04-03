@@ -1,0 +1,33 @@
+window-buttons {
+	spacing: 11;
+}
+
+window-buttons window-button {
+	border-radius: 5;
+	height: 10;
+	width: 10;
+	color: #ff0000;
+}
+
+window-buttons #window-close {
+	color: #ff0000;
+}
+
+window-buttons #window-minimize {
+	color: #00ff00;
+}
+
+window-buttons #window-maximize {
+	color: #0000ff;
+}
+
+icon-button {
+    border-radius: 999;
+    background: #ff0000;
+}
+.channel-button {
+    color: #ffffff;
+    border-radius: 21;
+    width: 42;
+    height: 42;
+}
