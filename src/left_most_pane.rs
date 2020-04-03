@@ -39,15 +39,14 @@ impl Template for LeftMostPane {
                                         Container::create()
                                         .height(20.0)
                                         .child(
-                                            TextBlock::create()
-                                                .text("WindowButtons")
-                                                .build(ctx)
+                                            WindowButtons::create().build(ctx)
                                         )
                                         .build(ctx)
                                     )
                                     .child(
-                                        TextBlock::create()
-                                            .text("Icon")
+                                        IconButton::create()
+                                            .icon("Icon")
+                                            .class("channel-button")
                                             .build(ctx)
                                     )
                                     .child(

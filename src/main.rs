@@ -10,8 +10,9 @@ mod message_composer;
 mod room_view;
 mod room_header;
 mod room_list;
+mod custom_widgets;
 
-
+use custom_widgets::*;
 use left_most_pane::*;
 use left_pane::*;
 use right_pane::*;
@@ -24,11 +25,11 @@ use room_list::*;
 
 use orbtk::theme::DEFAULT_THEME_CSS;
 
-// static CSS_EXT: &'static str = include_str!("../res/css/main.css");
+static CSS_EXT: &'static str = include_str!("../res/orbtk-chat.css");
 
 fn get_theme() -> ThemeValue {
     ThemeValue::create_from_css(DEFAULT_THEME_CSS)
-        // .extension_css(CSS_EXT)
+        .extension_css(CSS_EXT)
         .build()
 }
 
